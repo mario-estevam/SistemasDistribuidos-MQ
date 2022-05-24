@@ -18,7 +18,7 @@ public class WebSocketChatEventListener {
 
     @EventListener
     public void handleWebSocketConnectListener(SessionConnectedEvent event) {
-        System.out.println("Received a new web socket connection");
+        System.out.println("Nova conexão estabelecida");
     }
 
     @EventListener
@@ -32,7 +32,7 @@ public class WebSocketChatEventListener {
             chatMessage.setType("Leave");
             chatMessage.setSender(username);
 
-            messagingTemplate.convertAndSend("/topic/javainuse", chatMessage);
+            messagingTemplate.convertAndSend("/topic/chat", chatMessage);
         }
     }
 }

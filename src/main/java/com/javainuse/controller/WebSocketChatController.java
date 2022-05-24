@@ -12,13 +12,13 @@ import com.javainuse.domain.WebSocketChatMessage;
 public class WebSocketChatController {
 
 	@MessageMapping("/chat.sendMessage")
-	@SendTo("/topic/javainuse")
+	@SendTo("/topic/chat")
 	public WebSocketChatMessage sendMessage(@Payload WebSocketChatMessage webSocketChatMessage) {
 		return webSocketChatMessage;
 	}
 
 	@MessageMapping("/chat.newUser")
-	@SendTo("/topic/javainuse")
+	@SendTo("/topic/chat")
 	public WebSocketChatMessage addUser(@Payload WebSocketChatMessage webSocketChatMessage,
 			SimpMessageHeaderAccessor headerAccessor) {
 		headerAccessor.getSessionAttributes().put("username", webSocketChatMessage.getSender());
