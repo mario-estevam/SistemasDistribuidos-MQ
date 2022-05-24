@@ -32,7 +32,7 @@ public class WebSocketChatEventListener {
             chatMessage.setType("Leave");
             chatMessage.setSender(username);
 
-            messagingTemplate.convertAndSend("/topic/chat", chatMessage);
+            messagingTemplate.convertAndSend("/topic/javainuse", chatMessage);
         }
     }
 }
