@@ -1,10 +1,11 @@
-{
+body{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 html, body {
+  font-family: 'Poppins', sans-serif;
 	height: 100%;
 	overflow: hidden;
 }
@@ -88,7 +89,9 @@ button.accent {
 }
 
 .welcome-page-container {
-	background-color: grey;
+  color: #fff;
+  background-color: #34af23 	;
+  border-radius: 6px;
 	width: 100%;
 	max-width: 500px;
 	display: inline-block;
@@ -103,6 +106,13 @@ button.accent {
 	right: 0;
 	margin: 0 auto;
 	margin-top: -160px;
+}
+
+.button-login{
+  border-radius: 6px;
+  background-color: #6959CD	;
+  color: #fff;
+
 }
 
 #dialogue-page {
@@ -201,8 +211,8 @@ button.accent {
 
 #dialogueForm .input-group button {
 	float: left;
-	width: 80px;
-	height: 38px;
+  border-radius: 6px;
+	
 	margin-left: 5px;
 }
 
